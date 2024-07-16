@@ -29,7 +29,26 @@ How to Install and Run the Project:- [Run in any IDE with python installed]
 Here we are not using any external module and library that needs to be imported.
 Run these commands in order to migrate model's fields into Database.
 
-#python commands:-
+First need to create virtual environment(named venv).
+
+python -m venv venv
+
+activate virtual environment in windows
+
+venv\Scripts\activate
+
+in macos
+
+source venv/bin/activate
+
+Now install all the requirement for this project by
+
+pip install -r requirements.txt
+
+
+
+for DB migration:-
+
 python manage.py makemigrations
 python manage.py migrate
 
