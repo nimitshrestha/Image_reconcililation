@@ -2,9 +2,13 @@ from django.db.models import Q
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import Contact
+from rest_framework import status
 from .serializers import IdentifyResponseSerializer
 
 class IdentifyView(APIView):
+    def get(self, request):
+        return Response({"message": "Please use POST request to submit data"}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
+
     def post(self, request):
         email = request.data.get('email')
         phone_number = request.data.get('phoneNumber')

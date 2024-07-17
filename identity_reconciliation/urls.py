@@ -19,6 +19,6 @@ from .views import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('contacts.urls')),
+    path('api/', include('contacts.urls')),
     path('', home, name='home'), 
 ]
