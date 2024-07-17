@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 import dj_database_url
 
@@ -26,7 +27,10 @@ SECRET_KEY = 'django-insecure-@7o^w5)=!*o^7gu(n2tj7!gjao1s268&_4674$w4&&x4vx5hqq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['image-reconcililation.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['image-reconciliation-xv4j.onrender.com', 'localhost', '127.0.0.1']
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 
 # Application definition

@@ -16,7 +16,7 @@ def home(request):
         <h1>Welcome to the Identity Reconciliation API</h1>
         <p>This API provides identity reconciliation services.</p>
         <p>To use the API, send a POST request to the following endpoint:</p>
-        <code>/identify/</code>
+        <code>/api/identify/</code>
         <p>The request body should be in JSON format and include either an email or a phone number (or both):</p>
         <pre><code>
 {
